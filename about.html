@@ -5,54 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我 | 蔡侑潔</title>
     <link rel="stylesheet" href="css/simple.css">
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .profile-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .profile-image {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .skill-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .timeline {
+            margin: 1rem 0;
+        }
+        .timeline-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-    
 
 <body>
     <header>
         <nav>
-            <a href="index.html">首頁</a>
-            <a href="blog/index.html">證照與檢定</a>
             <a href="about.html" aria-current="page">關於我</a>
-            <a href="resume.html">未來規劃</a>
+            <a href="blog/index.html">證照與檢定</a>
             <a href="fun.html">學習反思</a>
+            <a href="resume.html">未來規劃</a>
         </nav>
-        <h1>關於我</h1>
+        <h1>關於我 - 個人學術檔案</h1>
     </header>
 
-    <!-- 這裡加入了CSS類 -->
-    <div class="image-container" style="text-align: center;">
-        <img src="images/27-2.jpg" alt="蔡侑潔" style="width: 300px; height: auto;">
-      </div>
-      
-      
-      <section>
-        <h2>個人簡介</h2>
-        <p>大家好，我是 <strong style="color: red;">蔡侑潔</strong>，就讀於二林工商資料處理科。我對 <strong style="color: red;">資訊領域</strong>有高度興趣，尤其是程式設計、資料庫管理和網站建置。在學期間積極參與課程與實習，並在專題製作中展現實力，期望未來能在資訊管理領域發光發熱。</p>
-      
-        <h2>學習歷程與證照</h2>
-        <p>我致力於提升專業能力，並取得三張證照：</p>
-        <ul>
-          <li><strong style="color: red;">會計資訊丙級</strong>：建立財務與資訊系統的基本觀念。</li>
-          <li><strong style="color: red;">電腦軟體應用丙級</strong>：熟悉辦公軟體與簡易程式撰寫。</li>
-          <li><strong style="color: red;">電腦軟體應用乙級</strong>：強化應用開發與設計能力。</li>
-        </ul>
-        <p>這些證照展現了我的 <strong style="color: red;">專業實力</strong>，也增強了升學與職涯的信心。</p>
-      
-        <h2>升學動機與未來目標</h2>
-        <p>我希望升學至 <strong style="color: red;">資訊管理系</strong>，進一步學習網站開發與資料管理，結合理論與實務，為數位社會打下堅實基礎。</p>
-      
-        <h2>個人特質</h2>
-        <p>我是一位 <strong style="color: red;">認真負責</strong>的人，在專題中選擇獨立完成網站專案，展現出挑戰自我與解決問題的能力。</p>
-      
-        <p>我也重視 <strong style="color: red;">團隊合作</strong>，善於傾聽與改進，這讓我成為更成熟且負責任的學習者。</p>
-      </section>
-      
-      
-      
-      
-      
+    <div class="profile-container">
+        <img src="images/27-2.jpg" alt="蔡侑潔" class="profile-image">
+       
+    </div>
 
-    
+    <section>
+        <h2>個人簡介</h2>
+        <p>您好，我是 <strong class="highlight">蔡侑潔</strong>，現就讀於二林工商資料處理科的<strong class="highlight">優秀學生</strong>。作為一位充滿熱情的資訊專業人才，我對<strong class="highlight">資訊科技</strong>領域有濃厚興趣與專注，特別是在<strong class="highlight">程式設計</strong>、<strong class="highlight">資料庫管理</strong>和<strong class="highlight">網站開發</strong>方面展現出色能力。</p>
+        
+        <p>在學術旅程中，我不僅專注於理論知識的掌握，更重視<strong class="highlight">實務應用能力</strong>的培養。透過積極參與各種專題製作與實習機會，我已成功將課堂所學轉化為解決實際問題的能力，並在此過程中展現出<strong class="highlight">獨立思考</strong>與<strong class="highlight">創新精神</strong>。</p>
+    </section>
+
+    <section>
+        <h2>專業技能與專長</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3><strong class="highlight">網站開發</strong></h3>
+                <p>熟悉HTML、CSS及JavaScript，能夠獨立建構響應式網站，注重使用者體驗與視覺設計。</p>
+            </div>
+            <div class="skill-card">
+                <h3><strong class="highlight">程式設計</strong></h3>
+                <p>掌握基礎程式語言，能夠進行邏輯分析並解決實際問題，具備演算法思維。</p>
+            </div>
+            <div class="skill-card">
+                <h3><strong class="highlight">資料分析</strong></h3>
+                <p>具備資料收集、整理與分析能力，能夠從數據中提取有價值的資訊，協助決策制定。</p>
+            </div>
+            <div class="skill-card">
+                <h3><strong class="highlight">問題解決</strong></h3>
+                <p>擁有系統性思考方法，面對挑戰能夠冷靜分析，提出多元解決方案。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>學習歷程與專業證照</h2>
+        <p>我深信<strong class="highlight">終身學習</strong>的重要性，並透過獲取專業證照來驗證自身能力：</p>
+        <ul>
+            <li><strong class="highlight">電腦軟體應用乙級技術士</strong>：展現進階的辦公軟體應用與自動化處理能力，僅有少數高中職學生能取得此證照。</li>
+            <li><strong class="highlight">電腦軟體應用丙級技術士</strong>：熟練掌握辦公軟體操作與基礎程式設計能力。</li>
+            <li><strong class="highlight">會計資訊丙級技術士</strong>：具備財務數據處理與會計資訊系統操作能力，展現跨領域學習成果。</li>
+        </ul>
+        
+        <p>這些專業證照不僅是我<strong class="highlight">專業能力</strong>的認證，更反映了我對自我要求的嚴謹態度與<strong class="highlight">持續精進</strong>的決心。</p>
+
+        <div class="timeline">
+            <h3>學習里程碑</h3>
+            <div class="timeline-item">
+                <h4>2023年</h4>
+                <p>取得<strong class="highlight">電腦軟體應用乙級技術士</strong>證照，成為班級中少數擁有乙級證照的同學。</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2022年</h4>
+                <p>獨立完成<strong class="highlight">個人專題網站</strong>，展現網頁設計與後端開發能力。</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2021年</h4>
+                <p>取得電腦軟體應用丙級與會計資訊丙級雙證照，奠定跨領域專業基礎。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>升學規劃與未來願景</h2>
+        <p>我的學術目標是升讀優質大學的<strong class="highlight">資訊管理學系</strong>，藉此深化專業知識並拓展學術視野。在大學期間，我期望：</p>
+        
+        <ul>
+            <li>深入學習<strong class="highlight">資料科學</strong>與<strong class="highlight">人工智慧</strong>等前沿技術</li>
+            <li>參與<strong class="highlight">產學合作專案</strong>，累積實戰經驗</li>
+            <li>培養<strong class="highlight">國際視野</strong>，參與交換學生或國際競賽</li>
+            <li>發展<strong class="highlight">跨領域整合能力</strong>，結合商業知識與技術專長</li>
+        </ul>
+        
+        <p>長期而言，我希望能成為<strong class="highlight">數位轉型</strong>領域的專業人才，為企業提供創新解決方案，並為社會的<strong class="highlight">科技發展</strong>貢獻一份心力。</p>
+    </section>
+
+    <section>
+        <h2>個人特質與核心價值</h2>
+        <p>作為一位年輕的資訊專業人才，我擁有以下核心特質：</p>
+        
+        <ul>
+            <li><strong class="highlight">自主學習能力</strong>：善於規劃學習路徑，主動探索新知識與技術。</li>
+            <li><strong class="highlight">創新思維</strong>：不受限於既有框架，勇於嘗試新方法解決問題。</li>
+            <li><strong class="highlight">高度責任感</strong>：對自己的工作與承諾負責，堅持高品質成果。</li>
+            <li><strong class="highlight">團隊合作精神</strong>：尊重多元觀點，善於溝通協調，共同達成目標。</li>
+            <li><strong class="highlight">韌性與抗壓性</strong>：面對挑戰不輕言放棄，視困難為成長機會。</li>
+        </ul>
+        
+        <p>在專題製作過程中，我選擇<strong class="highlight">獨立完成</strong>整個網站專案，從需求分析、設計規劃到實際開發，全程展現了我勇於挑戰自我並<strong class="highlight">解決複雜問題</strong>的能力。</p>
+        
+        <p>同時，我深知<strong class="highlight">專業成長</strong>需要不斷學習與自我反思。我經常主動尋求回饋，並將其轉化為改進的動力，使我逐漸成長為更加<strong class="highlight">全面且成熟</strong>的資訊專業人才。</p>
+    </section>
+
+    <section>
+        <h2>學術成就與特殊表現</h2>
+        <p>在校期間，我不僅專注於專業能力的培養，也積極參與各類<strong class="highlight">學術活動</strong>：</p>
+        
+        <ul>
+            <li>擔任班級<strong class="highlight">資訊幹部</strong>，協助教師與同學解決技術問題</li>
+            <li>參與校內<strong class="highlight">程式設計競賽</strong>，獲得優良成績</li>
+            <li>協助建置校內學生作品<strong class="highlight">展示平台</strong>，提升校園數位化程度</li>
+            <li>積極參與<strong class="highlight">業界實習</strong>，將理論知識應用於實務環境</li>
+        </ul>
+        
+        <p>這些經歷不僅豐富了我的學習歷程，更培養了我<strong class="highlight">專業自信</strong>與<strong class="highlight">服務精神</strong>，為未來的學術與職涯發展奠定堅實基礎。</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 蔡侑潔 | 資料處理科專業人才</p>
+        <p>聯絡資訊：<a href="mailto:your.email@example.com">s116127@elvs.chc.edu.tw</a></p>
+    </footer>
 </body>
 </html>
