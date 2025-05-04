@@ -1,56 +1,236 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../css/simple.css" />
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>證照心得分享</title>
-  </head>
-
-  <body>
-    <header>
-      <nav>
-         <a href="../about.html">關於我</a>
-        <a href="index.html" aria-current="page">證照與檢定</a>
-       
+    <style>
+        /* 簡潔現代風格 */
+        :root {
+            --primary-color: #1a5276;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --light-bg: #f5f7fa;
+            --light-border: #dce4ec;
+            --white: #ffffff;
+        }
         
-        <a href="../fun.html">學習反思</a>
-        <a href="../index.html">未來規劃</a>
-      </nav>
-      <h1>證照與檢定 學習心得</h1>
-    </header>
-    <main>
-      <article>
-        <h2>
-          <a href="丙級證照.html">我如何考到電腦軟體應用丙級證照</a>
-        </h2>
-        <p><time datetime="2025-03-03">112年07月05日</time></p>
-        <p>
-          在這段準備過程中，我學到了許多關於電腦軟體應用的基礎知識，這張證照幫助我打下了良好的基礎。通過這次的考試，我更加了解了自己的優勢和不足，並且認識到持續學習和實踐的重要性。
-        </p>
-      </article>
-      <article>
-        <h2>
-          <a href="乙級證照.html">我如何考到電腦軟體應用乙級證照</a>
-        </h2>
-        <p><time datetime="2025-03-03">2025年3月4日</time></p>
-        <p>
-          這次的乙級證照準備讓我學到了更進階的軟體操作技巧。與丙級證照不同，乙級的考試涵蓋了更多實用的技能，讓我對電腦軟體的應用有了更深的了解。這一經歷讓我不僅提升了自己的專業知識，也增強了信心。
-        </p>
-      </article>
-      <article>
-        <h2>
-          <a href="會計資訊丙級.html">我如何考到會計資訊丙級證照</a>
-        </h2>
-        <p><time datetime="2025-03-03">2025年3月5日</time></p>
-        <p>
-          會計資訊丙級證照的考取過程讓我學會了如何運用電腦軟體處理會計事務。這項技能不僅增強了我的專業能力，也為我未來的職業發展打下了堅實的基礎。這段學習經歷讓我體會到理論與實踐的結合是學習的關鍵。
-        </p>
-      </article>
-    </main>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover, nav a[aria-current="page"] {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            border-bottom: 1px solid var(--light-border);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--text-color);
+            margin: 25px 0 15px;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        ul {
+            margin: 15px 0 25px 20px;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .certificate-section {
+            margin: 20px 0;
+        }
+        
+        .certificate-card {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--white);
+            border: 1px solid var(--light-border);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certificate-card h2 {
+            margin-top: 0;
+        }
+        
+        .certificate-card h2 a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .certificate-card h2 a:hover {
+            color: var(--accent-color);
+        }
+        
+        .certificate-card time {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-border);
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-    <footer>
-      改自：<a href="https://htmlforpeople.com/">HTML for People</a>
-      </p>    
-    </footer>
-  </body>
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 5px 0;
+                width: 80%;
+                text-align: center;
+            }
+            
+            .certificate-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>證照與檢定 學習心得</h1>
+            <nav>
+                <a href="../index.html">關於我</a>
+                <a href="index.html" aria-current="page">證照與檢定</a>
+                <a href="../fun.html">學習反思</a>
+                <a href="../about.html">未來規劃</a>
+            </nav>
+        </header>
+
+        <section class="certificate-section">
+            <div class="certificate-card">
+                <h2>
+                    <a href="丙級證照.html">我如何考到電腦軟體應用丙級證照</a>
+                </h2>
+                <time datetime="2023-07-05">112年07月05日</time>
+                <p>
+                    在這段準備過程中，我學到了許多關於<span class="highlight">電腦軟體應用</span>的基礎知識，這張證照幫助我打下了良好的基礎。通過這次的考試，我更加了解了自己的優勢和不足，並且認識到<span class="highlight">持續學習和實踐</span>的重要性。
+                </p>
+            </div>
+            
+            <div class="certificate-card">
+                <h2>
+                    <a href="乙級證照.html">我如何考到電腦軟體應用乙級證照</a>
+                </h2>
+                <time datetime="2025-03-04">2025年3月4日</time>
+                <p>
+                    這次的乙級證照準備讓我學到了更<span class="highlight">進階的軟體操作技巧</span>。與丙級證照不同，乙級的考試涵蓋了更多實用的技能，讓我對電腦軟體的應用有了更深的了解。這一經歷讓我不僅提升了自己的專業知識，也增強了信心。
+                </p>
+            </div>
+            
+            <div class="certificate-card">
+                <h2>
+                    <a href="會計資訊丙級.html">我如何考到會計資訊丙級證照</a>
+                </h2>
+                <time datetime="2025-03-05">2025年3月5日</time>
+                <p>
+                    會計資訊丙級證照的考取過程讓我學會了如何<span class="highlight">運用電腦軟體處理會計事務</span>。這項技能不僅增強了我的專業能力，也為我未來的職業發展打下了堅實的基礎。這段學習經歷讓我體會到<span class="highlight">理論與實踐的結合</span>是學習的關鍵。
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>改自：<a href="https://htmlforpeople.com/">HTML for People</a></p>
+        </footer>
+    </div>
+</body>
 </html>

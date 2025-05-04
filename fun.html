@@ -1,55 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學習反思 | Caiyy的學習歷程</title>
-    <link rel="stylesheet" href="css/simple.css">
+    <title>學習反思 | 蔡侑潔</title>
     <style>
+        /* 簡潔現代風格 - 與 about.html 保持一致 */
+        :root {
+            --primary-color: #1a5276;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --light-bg: #f5f7fa;
+            --light-border: #dce4ec;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover, nav a[aria-current="page"] {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            border-bottom: 1px solid var(--light-border);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--text-color);
+            margin: 25px 0 15px;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
         .highlight {
-            color: #e74c3c;
+            color: var(--accent-color);
             font-weight: bold;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        ul {
+            margin: 15px 0 25px 20px;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .reflection-section {
+            background-color: var(--white);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .reflection-card {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--white);
+            border: 1px solid var(--light-border);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .reflection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .reflection-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid var(--light-border);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .quote-box {
+            background-color: rgba(26, 82, 118, 0.05);
+            border-left: 3px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-border);
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 5px 0;
+                width: 80%;
+                text-align: center;
+            }
+            
+            .reflection-card {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-             <a href="about.html">關於我</a>
-            <a href="blog/index.html">證照與檢定</a>
-           
-            <a href="fun.html" aria-current="page">學習反思</a>
-             <a href="index.html">未來規劃</a>
-        </nav>
-        <h1>學習反思與成長歷程</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>學習反思與成長歷程</h1>
+            <nav>
+                <a href="index.html">關於我</a>
+                <a href="blog/index.html">證照與檢定</a>
+                <a href="fun.html" aria-current="page">學習反思</a>
+                <a href="about.html">未來規劃</a>
+            </nav>
+        </header>
 
-    
-        
-        <h3>學習方法的反思</h3>
-        <p>在學習過程中，我發現<span class="highlight">主動學習</span>比被動接收知識更為有效。將課堂知識與<span class="highlight">實際應用相結合</span>，讓我對知識點有了更深入的理解。此外，建立<span class="highlight">有效的學習策略</span>對於掌握複雜概念至關重要。</p>
-        
-        <h3>核心學習成果</h3>
-        <ul>
-            <li><span class="highlight">跨領域整合能力</span> - 本學期我嘗試將不同課程的知識點進行整合，發現這種跨學科的思考方式能夠激發更多創新思維，並對問題有更全面的理解。</li>
+        <section class="reflection-section">
+            <div class="reflection-card">
+                <h3>學習方法的反思</h3>
+                <p>在學習過程中，我發現<span class="highlight">主動學習</span>比被動接收知識更為有效。將課堂知識與<span class="highlight">實際應用相結合</span>，讓我對知識點有了更深入的理解。此外，建立<span class="highlight">有效的學習策略</span>對於掌握複雜概念至關重要。</p>
+                
+                <div class="quote-box">
+                    「學習不是填滿一個容器，而是點燃一把火。」— 普魯塔克
+                </div>
+            </div>
             
-            <li><span class="highlight">團隊協作技能</span> - 通過小組項目，我學會了如何有效地與不同背景的同學合作，共同解決問題。這不僅提升了我的溝通能力，也讓我理解了多元觀點的價值。</li>
+            <div class="reflection-card">
+                <h3>核心學習成果</h3>
+                <ul>
+                    <li><span class="highlight">跨領域整合能力</span> - 本學期我嘗試將不同課程的知識點進行整合，發現這種跨學科的思考方式能夠激發更多創新思維，並對問題有更全面的理解。</li>
+                    
+                    <li><span class="highlight">團隊協作技能</span> - 通過小組項目，我學會了如何有效地與不同背景的同學合作，共同解決問題。這不僅提升了我的溝通能力，也讓我理解了多元觀點的價值。</li>
+                    
+                    <li><span class="highlight">時間管理與自律</span> - 面對多門課程的學習壓力，我開發了個人的時間管理系統，提高了學習效率。每週的學習計劃和定期的自我檢視是我保持進步的關鍵。</li>
+                    
+                    <li><span class="highlight">反思性學習循環</span> - 我採用「計劃-執行-反思-調整」的學習模式，使我能夠不斷優化學習方法，適應不同課程的需求。</li>
+                </ul>
+            </div>
             
-            <li><span class="highlight">時間管理與自律</span> - 面對多門課程的學習壓力，我開發了個人的時間管理系統，提高了學習效率。每週的學習計劃和定期的自我檢視是我保持進步的關鍵。</li>
+            <div class="reflection-card">
+                <h3>克服的挑戰</h3>
+                <p>本學期最大的挑戰是<span class="highlight">專業術語的理解與應用</span>。我通過建立個人詞彙表和概念圖，逐步克服了這一困難。另外，<span class="highlight">實踐操作與理論學習的平衡</span>也是我不斷調整的方向。</p>
+            </div>
             
-            <li><span class="highlight">反思性學習循環</span> - 我採用「計劃-執行-反思-調整」的學習模式，使我能夠不斷優化學習方法，適應不同課程的需求。</li>
-        </ul>
-        
-        <h3>克服的挑戰</h3>
-        <p>本學期最大的挑戰是<span class="highlight">專業術語的理解與應用</span>。我通過建立個人詞彙表和概念圖，逐步克服了這一困難。另外，<span class="highlight">實踐操作與理論學習的平衡</span>也是我不斷調整的方向。</p>
-        
-        <h3>未來學習目標</h3>
-        <p>基於本學期的反思，我計劃在未來的學習中<span class="highlight">深化專業知識</span>，並進一步<span class="highlight">提升研究能力</span>。同時，我希望能夠參與更多實際項目，將理論知識轉化為實踐技能。</p>
-        
-        <p>總結而言，這學期的學習讓我認識到<span class="highlight">持續反思與調整</span>對學習效果的重要性。透過不斷檢視自己的學習方法和成果，我能夠更有針對性地提升自己的能力，為未來的學術和職業發展奠定基礎。</p>
-    </section>
-    
-    
+            <div class="reflection-card">
+                <h3>未來學習目標</h3>
+                <p>基於本學期的反思，我計劃在未來的學習中<span class="highlight">深化專業知識</span>，並進一步<span class="highlight">提升研究能力</span>。同時，我希望能夠參與更多實際項目，將理論知識轉化為實踐技能。</p>
+            </div>
+            
+            <p>總結而言，這學期的學習讓我認識到<span class="highlight">持續反思與調整</span>對學習效果的重要性。透過不斷檢視自己的學習方法和成果，我能夠更有針對性地提升自己的能力，為未來的學術和職業發展奠定基礎。</p>
+        </section>
+
+        <footer>
+            <p>聯絡資訊：<a href="mailto:s116127@elvs.chc.edu.tw">s116127@elvs.chc.edu.tw</a></p>
+        </footer>
+    </div>
 </body>
 </html>

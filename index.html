@@ -1,74 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>未來規劃 | 蔡侑潔的學習歷程</title>
-    <link rel="stylesheet" href="css/simple.css">
+    <title>關於我 | 蔡侑潔</title>
     <style>
+        /* 簡潔現代風格 */
+        :root {
+            --primary-color: #1a5276;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --light-bg: #f5f7fa;
+            --light-border: #dce4ec;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover, nav a[aria-current="page"] {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            border-bottom: 1px solid var(--light-border);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--text-color);
+            margin: 15px 0 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
         .highlight {
-            color: #e74c3c;
+            color: var(--accent-color);
             font-weight: bold;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-text {
+            flex: 1;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-card {
+            background-color: var(--white);
+            padding: 15px;
+            border: 1px solid var(--light-border);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline {
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-border);
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="about.html">關於我</a>
-            <a href="blog/index.html">證照與檢定</a>
-            
-            <a href="fun.html">學習反思</a>
-            <a href="index.html" aria-current="page">未來規劃</a>
-        </nav>
-        <h1>我的未來規劃</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>關於我 - 個人資料檔案</h1>
+            <nav>
+                <a href="index.html" aria-current="page">關於我</a>
+                <a href="blog/index.html">證照與檢定</a>
+                <a href="fun.html">學習反思</a>
+                <a href="about.html">未來規劃</a>
+            </nav>
+        </header>
 
-    <section>
-        <h2>學術發展規劃</h2>
-        <ul>
-            <li><span class="highlight">專業領域深化</span> - 計劃在現有專業基礎上進一步深入研究，特別是在<span class="highlight">數據分析</span>和<span class="highlight">研究方法</span>方面提升能力，為未來的學術研究奠定堅實基礎。</li>
-            
-            <li><span class="highlight">跨領域學習</span> - 除了專業課程外，計劃選修相關的跨領域課程，如<span class="highlight">人工智能應用</span>和<span class="highlight">創新管理</span>，培養多元思維和綜合解決問題的能力。</li>
-            
-            <li><span class="highlight">國際交流機會</span> - 積極申請國際交換生項目，希望能在畢業前獲得國外學習的經驗，擴展國際視野並提升跨文化溝通能力。</li>
-        </ul>
-        
-        <h2>職業發展路徑</h2>
-        <ul>
-            <li><span class="highlight">實習與實務經驗累積</span> - 計劃在大三結束前參與至少一次專業相關的實習，將理論知識轉化為實際工作技能，同時建立初步的職業網絡。</li>
-            
-            <li><span class="highlight">研究與創新能力培養</span> - 參與教授的研究項目，或自主開展小型研究計劃，培養科學研究思維和創新解決問題的能力。</li>
-            
-            <li><span class="highlight">專業證照取得</span> - 設定明確的專業證照考取計劃，包括<span class="highlight">國際認證</span>和<span class="highlight">產業技能證明</span>，提升專業競爭力。</li>
-            
-            <li><span class="highlight">進階學位規劃</span> - 評估並準備未來繼續深造的可能性，包括研究所申請準備和專業方向選擇，以獲得更專業的學術訓練。</li>
-        </ul>
+        <div class="profile-container">
+            <img src="images/27-2.jpg" alt="蔡侑潔" class="profile-image">
+            <div class="profile-text">
+                <h2>蔡侑潔</h2>
+                <p>二林工商資料處理科</p>
+                <p>您好，我是<strong class="highlight">蔡侑潔</strong>，現就讀於二林工商資料處理科的<strong class="highlight">優秀學生</strong>。我對<strong class="highlight">資訊科技</strong>與<strong class="highlight">人工智慧</strong>領域有濃厚興趣，特別是在<strong class="highlight">程式設計</strong>、<strong class="highlight">資料分析</strong>和<strong class="highlight">網站開發</strong>方面展現專業能力。</p>
+            </div>
+        </div>
 
-        <h2>個人能力發展</h2>
-        <ul>
-            <li><span class="highlight">領導能力培養</span> - 通過參與學生組織和團隊項目，主動承擔領導角色，培養團隊管理和決策能力。</li>
-            
-            <li><span class="highlight">溝通表達能力提升</span> - 參加演講課程和學術報告會，提升專業表達和簡報技巧，為未來的學術和職業發展做準備。</li>
-            
-            <li><span class="highlight">自我管理與效能提升</span> - 建立個人時間管理和目標追蹤系統，提高學習和工作效率，培養持續自我提升的習慣。</li>
-        </ul>
+        <section>
+            <h2>個人簡介</h2>
+            <p>作為一位資訊專業人才，我不僅專注於理論知識的掌握，更重視<strong class="highlight">實務應用能力</strong>的培養。透過參與專題製作與實習機會，我成功將課堂所學轉化為解決實際問題的能力，並展現出<strong class="highlight">獨立思考</strong>與<strong class="highlight">創新精神</strong>。</p>
+        </section>
 
-        <h2>時間規劃與里程碑</h2>
-        <p>我的未來發展計劃分為<span class="highlight">近期</span>（一年內）、<span class="highlight">中期</span>（畢業前）和<span class="highlight">長期</span>（畢業後五年）三個階段：</p>
-        
-        <ul>
-            <li><span class="highlight">近期目標</span>：完成核心課程學習，參與至少一個研究項目，考取第一張專業證照。</li>
+        <section>
+            <h2>專業技能與專長</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3><strong class="highlight">網站開發</strong></h3>
+                    <p>熟悉HTML、CSS及JavaScript，能夠獨立建構響應式網站，注重使用者體驗與視覺設計。</p>
+                </div>
+                <div class="skill-card">
+                    <h3><strong class="highlight">程式設計</strong></h3>
+                    <p>掌握基礎程式語言，能夠進行邏輯分析並解決實際問題，具備演算法思維。</p>
+                </div>
+                <div class="skill-card">
+                    <h3><strong class="highlight">資料分析</strong></h3>
+                    <p>具備資料收集、整理與分析能力，能夠從數據中提取有價值的資訊，協助決策制定。</p>
+                </div>
+                <div class="skill-card">
+                    <h3><strong class="highlight">人工智慧基礎</strong></h3>
+                    <p>具備AI基礎知識，了解機器學習原理，對深度學習與自然語言處理有初步認識。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>學習歷程與專業證照</h2>
+            <p>我深信<strong class="highlight">終身學習</strong>的重要性，並通過專業證照驗證自身能力：</p>
+            <ul>
+                <li><strong class="highlight">電腦軟體應用乙級技術士</strong>：展現進階的辦公軟體應用與自動化處理能力，僅有少數高中職學生能取得此證照。</li>
+                <li><strong class="highlight">電腦軟體應用丙級技術士</strong>：熟練掌握辦公軟體操作與基礎程式設計能力。</li>
+                <li><strong class="highlight">會計資訊丙級技術士</strong>：具備財務數據處理與會計資訊系統操作能力，展現跨領域學習成果。</li>
+            </ul>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2023年</h4>
+                    <p>取得<strong class="highlight">電腦軟體應用乙級技術士</strong>證照，成為班級中少數擁有乙級證照的同學。</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2022年</h4>
+                    <p>獨立完成<strong class="highlight">個人專題網站</strong>，展現網頁設計與後端開發能力。</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2021年</h4>
+                    <p>取得電腦軟體應用丙級與會計資訊丙級雙證照，奠定跨領域專業基礎。</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>升學規劃與未來願景</h2>
+            <p>我的學術目標是升讀優質大學的<strong class="highlight">人工智慧相關學系</strong>或<strong class="highlight">資訊管理學系(人工智慧組)</strong>，藉此深化專業知識並拓展學術視野。在大學期間，我期望：</p>
             
-            <li><span class="highlight">中期目標</span>：完成一次國際交流經驗，參與實習或產學合作計劃，建立專業作品集，為研究所申請或就業做準備。</li>
+            <ul>
+                <li>深入學習<strong class="highlight">機器學習</strong>與<strong class="highlight">深度學習</strong>等AI核心技術</li>
+                <li>參與<strong class="highlight">AI應用開發</strong>專案，累積實戰經驗</li>
+                <li>培養<strong class="highlight">國際視野</strong>，關注全球AI發展趨勢</li>
+                <li>探索<strong class="highlight">大數據分析</strong>與AI技術的結合應用</li>
+            </ul>
             
-            <li><span class="highlight">長期願景</span>：成為專業領域的專家，能夠將學術研究與實務應用相結合，為產業發展做出貢獻。</li>
-        </ul>
-        
-        <p>這份規劃將根據學習過程中的<span class="highlight">反思與調整</span>不斷優化，以確保我能夠在變化的環境中保持方向並持續成長。</p>
-    </section>
-    
-    
+            <p>長期而言，我希望能成為<strong class="highlight">人工智慧</strong>領域的專業人才，為產業的<strong class="highlight">數位智能化轉型</strong>貢獻一份心力，推動台灣在全球AI浪潮中的競爭力。</p>
+        </section>
+
+        <section>
+            <h2>個人特質與核心價值</h2>
+            <ul>
+                <li><strong class="highlight">自主學習能力</strong>：善於規劃學習路徑，主動探索新知識與技術。</li>
+                <li><strong class="highlight">創新思維</strong>：不受限於既有框架，勇於嘗試新方法解決問題。</li>
+                <li><strong class="highlight">高度責任感</strong>：對自己的工作與承諾負責，堅持高品質成果。</li>
+                <li><strong class="highlight">團隊合作精神</strong>：尊重多元觀點，善於溝通協調，共同達成目標。</li>
+                <li><strong class="highlight">韌性與抗壓性</strong>：面對挑戰不輕言放棄，視困難為成長機會。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>學術成就與特殊表現</h2>
+            <ul>
+                <li>擔任班級<strong class="highlight">資訊幹部</strong>，協助教師與同學解決技術問題</li>
+                <li>參與校內<strong class="highlight">程式設計競賽</strong>，獲得優良成績</li>
+                <li>協助建置校內學生作品<strong class="highlight">展示平台</strong>，提升校園數位化程度</li>
+                <li>積極參與<strong class="highlight">業界實習</strong>，將理論知識應用於實務環境</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>聯絡資訊：<a href="mailto:s116127@elvs.chc.edu.tw">s116127@elvs.chc.edu.tw</a></p>
+        </footer>
+    </div>
 </body>
 </html>

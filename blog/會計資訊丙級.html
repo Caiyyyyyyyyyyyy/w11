@@ -1,58 +1,241 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../css/simple.css" />
-    <title>我愛上了創意蛋糕</title>
-  </head>
-
-  
-  <body>
-    <header>
-      <nav>
-        <a href="../about.html">關於我</a>
-        <a href="index.html" aria-current="true">證照與檢定</a>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會計資訊丙級證照</title>
+    <style>
+        /* 簡潔現代風格 */
+        :root {
+            --primary-color: #1a5276;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --light-bg: #f5f7fa;
+            --light-border: #dce4ec;
+            --white: #ffffff;
+        }
         
-       
-        <a href="../fun.html">學習反思</a>
-         <a href="../index.html">未來規劃</a>
-      </nav>
-      <h1>我愛上了創意蛋糕</h1>
-      <p><time datetime="2025-02-17">2025年2月17日</time></p>
-    </header>
-    <main>
-      <p>
-        蛋糕不僅僅是美味的甜點，它還是一種藝術表達的形式。對我來說，創意蛋糕成為了我全新的熱情所在。
-      </p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover, nav a[aria-current="page"] {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            border-bottom: 1px solid var(--light-border);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--text-color);
+            margin: 15px 0 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .certificate-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section {
+            background-color: var(--white);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        
+        .button:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        time {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-border);
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-      <p>
-        一次偶然的機會，我看到了一些精美的創意蛋糕，這些蛋糕不僅美味，而且每一個細節都極具藝術感。從這一刻開始，我就決定要學習如何製作這些具有創意和獨特設計的蛋糕。
-      </p>
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 5px 0;
+            }
+            
+            .certificate-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
 
-      <p>
-        我開始研究蛋糕裝飾的技巧，從最基本的裱花技巧到如何使用糖霜、巧克力雕刻、甚至是翻糖來裝飾蛋糕。我對每一個細節都充滿了熱情，尤其是當我看到我的創作逐漸成形時，那種滿足感無法用言語表達。
-      </p>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的<span class="highlight">會計資訊丙級證照</span></h1>
+            <nav>
+                <a href="../index.html">關於我</a>
+                <a href="index.html" aria-current="page">證照與檢定</a>
+                <a href="../fun.html">學習反思</a>
+                <a href="../about.html">未來規劃</a>
+            </nav>
+            <p><time datetime="2025-03-05">114年03月05日</time></p>
+        </header>
 
-      <p>
-        我的第一次創意蛋糕製作是為了一位朋友的生日，我決定設計一個以大自然為靈感的蛋糕。使用天然的花朵、果實和巧克力來打造蛋糕的外觀，結果不僅讓我的朋友驚嘆，也讓我自己深深迷上了這個充滿創意的過程。
-      </p>
+        <main>
+            <img src="../images/丙級證照.png" alt="會計資訊丙級證照" class="certificate-image">
+            
+            <div class="content-section">
+                <h2>踏上會計專業之路</h2>
+                <p>
+                    會計不僅僅是數字的計算，它還是一種<span class="highlight">商業語言的表達形式</span>。對我來說，會計資訊丙級證照成為了我專業發展道路上的重要里程碑。
+                </p>
+            </div>
 
-      <blockquote>
-        「每一塊蛋糕，都是一件可以吃的藝術品。」<br />
-        <cite>&mdash; 我，對創意蛋糕的熱愛</cite>
-      </blockquote>
+            <div class="content-section">
+                <h2>證照的決心與準備</h2>
+                <p>
+                    一次課堂上的討論，我了解到會計資訊證照對未來就業的重要性，這些技能不僅實用，而且在職場中極具競爭力。從那時起，我就決定要認真準備考取這個<span class="highlight">專業且具認可度</span>的證照。
+                </p>
+                <p>
+                    我開始系統性地學習會計基礎知識，從最基本的會計科目分類到如何使用會計軟體處理日常交易、編製財務報表。我對每一個學習環節都投入了極大的熱情，尤其是當我能夠獨立完成一份完整的財務報表時，那種成就感無法用言語表達。
+                </p>
+            </div>
 
-      <p>
-        現在，我正在尋找更多的靈感，挑戰自己創作出更多富有想像力的蛋糕。我已經迫不及待想要和朋友們分享我的下一個創意作品！
-      </p>
+            <div class="content-section">
+                <h2>實踐學習與應用</h2>
+                <p>
+                    我的第一次完整模擬考試是在老師的指導下進行的，我決定以<span class="highlight">實際企業案例為練習</span>。運用所學的會計原則和軟體操作技巧來處理這些真實數據，結果不僅通過了模擬測驗，也讓我更加確信這是我想要深入發展的領域。
+                </p>
+            </div>
 
-      <a href="index.html" class="button">&larr; 回到部落格</a>
-    </main>
+            <div class="content-section">
+                <h2>未來的會計專業旅程</h2>
+                <p>
+                    「會計是商業的語言，掌握它就等於掌握了解讀企業的鑰匙。」
+                </p>
+                <p>
+                    現在，我已成功取得會計資訊丙級證照，但我知道這只是起點。我正在尋找更多的學習機會，挑戰自己掌握<span class="highlight">更高階的會計知識</span>。我已經開始規劃下一步，準備考取更高等級的證照！
+                </p>
+            </div>
 
-    <footer>
-      <p>用 ❤️ 和 🍰 創造甜蜜時光，來自caiyy的蛋糕。<br>
-      改自：<a href="https://htmlforpeople.com/">HTML for People</a>
-      </p>    
-    </footer>
-  </body>
+            <div class="button-container">
+                <a href="index.html" class="button">&larr; 回到證照列表</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>用努力與熱情創造學習成就，來自caiyy的會計筆記。</p>
+            <p>改自：<a href="https://htmlforpeople.com/">HTML for People</a></p>
+            <p>聯絡資訊：<a href="mailto:caiyy@email.com">caiyy@email.com</a></p>
+        </footer>
+    </div>
+</body>
 </html>
